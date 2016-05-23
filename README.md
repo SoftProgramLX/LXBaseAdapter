@@ -3,10 +3,10 @@
 
 可点击上面的0C5CADD9B0F72C4A98C73866C4EABA34.png图片查看效果图。
 
-API使用非常简单，按照例子的方法写很容易实现，demo有两个界面，从简单实现到灵活运用。
-只需要根据自己的业务创建一个Adapter继承自LXBaseAdapter，然后实现的方法查看LXBaseAdapterInterface接口选择。
-接口方法如下：
-  /**
+API使用非常简单，与BaseAdapter的接口类似，按照例子的方法写很容易实现，demo有两个界面，从简单实现到灵活运用。
+只需要根据自己的业务创建一个Adapter继承自LXBaseAdapter，然后实现的方法查看LXBaseAdapterInterface接口选择使用。
+接口方法如下:
+  	/**
 	 * 点击listView的触发方法onItemClick里调用的接口，区别点击的item、头或尾，与对应位置
 	 * */
 	public interface LXOnListViewClick {
