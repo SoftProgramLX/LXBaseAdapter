@@ -1,12 +1,12 @@
 # LXBaseAdapter
 为了灵活使用listView，封装了BaseAdapter，可对listView进行分组管理，每组都可以设置头与尾，每组的多行可以定义多种布局文件，实现了类似iOS的tableView功能。（The listview group management to flexibly using the listview encapsulates the BaseAdapter. In each group can be set up to the head and tail, each multi line can define multiple layout file, to achieve the tableview function similar to the IOS.）
 
-可点击上面的0C5CADD9B0F72C4A98C73866C4EABA34.png图片查看效果图。
+[效果图再最后](#效果图)
 
 API使用非常简单，与BaseAdapter的接口类似，按照例子的方法写很容易实现，demo有两个界面，从简单实现到灵活运用。
 只需要根据自己的业务创建一个Adapter继承自LXBaseAdapter，然后实现的方法查看LXBaseAdapterInterface接口选择使用。
 接口方法如下:<br>
-
+```java
   	/**
 	 * 点击listView的触发方法onItemClick里调用的接口，区别点击的item、头或尾，与对应位置
 	 **/
@@ -60,11 +60,12 @@ API使用非常简单，与BaseAdapter的接口类似，按照例子的方法写
 	 * */
 	//用于item被点击时传入position取到对应的indexPath（当row==-1代表为头视图，row==-2代表为尾视图）
 	public LXIndexPath getIndexPathWithPosition(int position, LXOnListViewClick listener);
+```
 
 
 
-
-特别注意，在Activity里面监听了listView的点击事件onItemClick方法，我们需要adapter调用getIndexPathWithPosition方法才会知道点的是item或头或尾的对应位置，然后再处理相应的业务。代码如下：
+特别注意，在Activity里面监听了listView的点击事件onItemClick方法，我们需要adapter调用getIndexPathWithPosition方法才会知道点的是item或头或尾的对应位置，然后再处理相应的业务。代码如下：<br>
+```java
   adapter.getIndexPathWithPosition(position, new LXOnListViewClick() {
 			@Override
 			public void onItemClick(LXIndexPath indexPath) {
@@ -81,3 +82,7 @@ API使用非常简单，与BaseAdapter的接口类似，按照例子的方法写
 				Log.e("onfooterClick", "section:"+section);
 			}
 		});
+		```
+
+效果图
+ ![image](https://github.com/SoftProgramLX/LXBaseAdapter/blob/master/0C5CADD9B0F72C4A98C73866C4EABA34.png)
