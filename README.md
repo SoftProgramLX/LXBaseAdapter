@@ -67,22 +67,23 @@ API使用非常简单，与BaseAdapter的接口类似，按照例子的方法写
 特别注意，在Activity里面监听了listView的点击事件onItemClick方法，我们需要adapter调用getIndexPathWithPosition方法才会知道点的是item或头或尾的对应位置，然后再处理相应的业务。代码如下：<br>
 ```java
   adapter.getIndexPathWithPosition(position, new LXOnListViewClick() {
-			@Override
-			public void onItemClick(LXIndexPath indexPath) {
-				Log.e("onItemClick", "indexPath:" + indexPath.section+":"+indexPath.row);
-			}
+	@Override
+	public void onItemClick(LXIndexPath indexPath) {
+		Log.e("onItemClick", "indexPath:" + indexPath.section+":"+indexPath.row);
+	}
+	
+	@Override
+	public void onHeaderClick(int section) {
+		Log.e("onHeaderClick", "section:"+section);
+	}
 			
-			@Override
-			public void onHeaderClick(int section) {
-				Log.e("onHeaderClick", "section:"+section);
-			}
-			
-			@Override
-			public void onfooterClick(int section) {
-				Log.e("onfooterClick", "section:"+section);
-			}
-		});
-		```
+	@Override
+	public void onfooterClick(int section) {
+		Log.e("onfooterClick", "section:"+section);
+	}
+});
+```
+
 
 效果图
  ![image](https://github.com/SoftProgramLX/LXBaseAdapter/blob/master/0C5CADD9B0F72C4A98C73866C4EABA34.png)
