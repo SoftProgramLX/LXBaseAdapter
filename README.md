@@ -5,16 +5,17 @@
 
 API使用非常简单，与BaseAdapter的接口类似，按照例子的方法写很容易实现，demo有两个界面，从简单实现到灵活运用。
 只需要根据自己的业务创建一个Adapter继承自LXBaseAdapter，然后实现的方法查看LXBaseAdapterInterface接口选择使用。
-接口方法如下:
+接口方法如下:<br>
+
   	/**
 	 * 点击listView的触发方法onItemClick里调用的接口，区别点击的item、头或尾，与对应位置
-	 * */
+	 **/
 	public interface LXOnListViewClick {
 		public void onItemClick(LXIndexPath idnexPath);
 		public void onHeaderClick(int section);
 		public void onfooterClick(int section);
 	}
-	
+
 	/**
 	 * 子类必须实现的方法 
 	 **/
