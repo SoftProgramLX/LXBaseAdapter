@@ -1,5 +1,11 @@
 # LXBaseAdapter
-为了灵活使用listView，封装了BaseAdapter，可对listView进行分组管理，每组都可以设置头与尾，每组的多行可以定义多种布局文件，实现了类似iOS的tableView功能。（The listview group management to flexibly using the listview encapsulates the BaseAdapter. In each group can be set up to the head and tail, each multi line can define multiple layout file, to achieve the tableview function similar to the IOS.）
+为了灵活使用listView，封装了BaseAdapter。实现了类似iOS的tableView功能。不用事先创建好所有可能需要的控件，再在运行时动态判断显示或隐藏。极大的提高了效率和减少了代码量。
+
+###主要功能:<br>
+1.可对listView进行分组管理
+2.每组都可以设置头与尾
+3.每组的多行可以定义多种布局文件
+4.可加载多个布局文件，从而可定制头与尾的布局文件
 
 [效果图在最后](#效果图)
 
@@ -86,3 +92,7 @@ API使用非常简单，与BaseAdapter的接口类似，按照例子的方法写
 <br>
 效果图<br>
  ![image](https://github.com/SoftProgramLX/LXBaseAdapter/blob/master/0C5CADD9B0F72C4A98C73866C4EABA34.png)
+
+<br>
+###QQ:2239344645    [我的github](https://github.com/SoftProgramLX?tab=repositories)
+<br>
